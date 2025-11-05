@@ -24,7 +24,7 @@ export default function HowItWorks() {
         {steps.map((step, index) => (
           <div
             key={index}
-            className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-[0_2px_10px_rgba(0,0,0,0.03)] transition hover:-translate-y-1 hover:shadow-md"
+            className="rounded-2xl bg-white border border-neutral-200 p-6 shadow-[0_2px_10px_rgba(0,0,0,0.03)] transition hover:-translate-y-1 hover:shadow-md"
           >
             <div className="mb-3 inline-flex size-9 items-center justify-center rounded-full bg-[#FF7A00]/10 font-semibold text-[#FF7A00]">
               {index + 1}

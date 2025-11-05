@@ -8,7 +8,7 @@ export default function Footer() {
               Built on Base. Powered by Farcaster.
             </p>
             <p className="mt-1 text-sm text-neutral-600">
-              Create. launch. and earn $MINI with viral miniapps.
+              Create. launch. and earn $MINI with viral mini apps.
             </p>
           </div>
 

@@ -27,7 +27,7 @@ export default function AppSidebar() {
               role="option"
               aria-selected={active === i}
               onClick={() => setActive(i)}
-              className={`w-full rounded-xl px-3 py-2 text-left text-sm transition ${
+              className={`w-full text-black rounded-xl px-3 py-2 text-left text-sm transition cursor-pointer ${
                 active === i ? "bg-[#6E44FF] text-white" : "hover:bg-neutral-50"
               }`}
             >
@@ -38,7 +38,7 @@ export default function AppSidebar() {
       </ul>
 
       <div className="mt-6 border-t pt-3">
-        <button className="w-full rounded-xl border px-3 py-2 text-left text-sm hover:bg-neutral-50">
+        <button className="w-full rounded-xl border px-3 py-2 text-left text-md text-black cursor-pointer hover:bg-neutral-50 ">
           Settings
         </button>
       </div>

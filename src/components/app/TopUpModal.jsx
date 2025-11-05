@@ -33,13 +33,13 @@ export default function TopUpModal({ open, onClose, onConfirm }) {
             <button
               type="button"
               onClick={onClose}
-              className="rounded-xl border px-3 py-1.5 text-sm hover:bg-neutral-50"
+              className="rounded-xl text-black cursor-pointer border px-3 py-1.5 text-sm hover:bg-neutral-50"
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="rounded-xl bg-[#FF7A00] px-3 py-1.5 text-sm text-white hover:opacity-90"
+              className="rounded-xl bg-[#FF7A00] px-3 py-1.5 text-sm text-white cursor-pointer hover:opacity-90"
             >
               Top up
             </button>

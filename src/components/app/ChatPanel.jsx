@@ -41,20 +41,20 @@ export default function ChatPanel() {
   }, [messages, loading]);
 
   return (
-    <div className="flex h-[70vh] flex-col rounded-2xl border bg-white">
+    <div className="flex h-[70vh] flex-col rounded-2xl border bg-white text-black">
       <div ref={listRef} className="flex-1 space-y-3 overflow-auto p-4">
         {messages.map((m, idx) => (
           <div key={idx} className={m.role === "user" ? "text-right" : "text-left"}>
             <div
               className={`inline-block rounded-2xl px-3 py-2 text-sm ${
-                m.role === "user" ? "bg-neutral-900 text-white" : "bg-neutral-100"
+                m.role === "user" ? "bg-neutral-900 bg-sky-600 text-white" : "bg-neutral-100"
               }`}
             >
               {m.text}
             </div>
           </div>
         ))}
-        {loading && <div className="text-left text-sm text-neutral-500">Minidev is typing…</div>}
+        {loading && <div className="text-left text-md text-black">Minidev is typing…</div>}
       </div>
 
       <form
@@ -69,7 +69,7 @@ export default function ChatPanel() {
           onChange={(e) => setInput(e.target.value)}
           placeholder="Type your prompt…"
           rows={2}
-          className="min-h-[44px] flex-1 resize-none rounded-xl border px-3 py-2 text-sm focus:border-neutral-400"
+          className="min-h-[44px] text-black flex-1 resize-none rounded-xl border px-3 py-2 text-sm focus:border-neutral-400"
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.shiftKey) {
               e.preventDefault();
@@ -78,7 +78,7 @@ export default function ChatPanel() {
           }}
           aria-label="Chat input"
         />
-        <button className="rounded-xl bg-[#FF7A00] px-4 py-2 text-sm text-white">Send</button>
+        <button className="rounded-xl bg-[#FF7A00] px-4 py-2 text-sm text-white bg-linear-to-t from-orange-300 to-orange-600 cursor-pointer">Send</button>
       </form>
     </div>
   );

@@ -31,7 +31,7 @@ export default function Hero() {
     <section className="mx-auto max-w-3xl px-4 py-16 text-center">
       <h1 className="text-4xl font-bold text-neutral-900">Build viral miniapps on Farcaster</h1>
       <p className="mt-3 text-neutral-600">
-        Create miniapps with a single prompt—no coding required.
+        Create mini apps with a single prompt—no coding required.
       </p>
 
       {/* Idea chips */}
@@ -43,7 +43,7 @@ export default function Hero() {
               setIdea(p);
               setError("");
             }}
-            className="rounded-full border px-3 py-1 text-sm text-neutral-700 hover:bg-neutral-50"
+            className="rounded-full bg-linear-to-t from-orange-50 to-orange-200 border px-3 py-1 text-sm text-neutral-700 hover:bg-sky-200 cursor-pointer"
           >
             {p}
           </button>
@@ -65,7 +65,7 @@ export default function Hero() {
           onClick={start}
           aria-label="Generate"
           disabled={loading}
-          className="min-w-[120px]"
+          className="min-w-[120px] text-black cursor-pointer bg-linear-to-t from-orange-300 to-orange-600"
         >
           {loading ? "Building…" : "Generate"}
         </Button>

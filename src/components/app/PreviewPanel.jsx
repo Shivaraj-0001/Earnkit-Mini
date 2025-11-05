@@ -16,7 +16,7 @@ export default function PreviewPanel() {
           <div className="text-xs text-neutral-500">
             https://app.minidev.fun/my-launchpad
             <button
-              className="ml-2 rounded border px-2 py-0.5 text-xs hover:bg-neutral-50"
+              className="ml-2 cursor-pointer hover:text-black rounded border px-2 py-0.5 text-xs hover:bg-neutral-50"
               onClick={() => navigator.clipboard?.writeText("https://app.minidev.fun/my-launchpad")}
             >
               Copy
@@ -39,19 +39,19 @@ export default function PreviewPanel() {
       {/* Toolbar */}
       <div className="flex items-center gap-2">
         <button
-          className="rounded-xl border px-3 py-1.5 text-sm hover:bg-neutral-50"
+          className="rounded-xl bg-gray-100 border px-3 py-1.5 text-sm text-black hover:bg-sky-100 cursor-pointer"
           onClick={() => alert("Code viewer is read-only (placeholder).")}
         >
           Code (read-only)
         </button>
         <button
-          className="rounded-xl border px-3 py-1.5 text-sm hover:bg-neutral-50"
+          className="rounded-xl bg-gray-100 border px-3 py-1.5 text-sm text-black hover:bg-sky-100 cursor-pointer"
           onClick={() => alert("Screenshot saved (mock).")}
         >
           Screenshot
         </button>
         <button
-          className="rounded-xl border px-3 py-1.5 text-sm hover:bg-neutral-50"
+          className="rounded-xl bg-gray-100 border px-3 py-1.5 text-sm text-black hover:bg-sky-100 cursor-pointer"
           onClick={() => window.location.reload()}
         >
           Refresh

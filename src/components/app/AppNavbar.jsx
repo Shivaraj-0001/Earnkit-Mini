@@ -9,13 +9,13 @@ export default function AppNavbar() {
 
   return (
     <>
-      <header className="border-b bg-white">
+      <header className="border-b bg-linear-to-b from-sky-100 to-sky-300">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
           {/* Left: Account summary (stub) */}
           <div className="flex items-center gap-3">
-            <div className="size-8 rounded-full bg-neutral-200" aria-hidden />
+            <div className="size-8 rounded-full bg-neutral-200 cursor-pointer" aria-hidden />
             <div className="text-sm">
-              <div className="font-medium text-neutral-900">@you</div>
+              <div className="font-medium text-neutral-900 cursor-pointer">@adam</div>
               <div className="text-neutral-500">0x1234…abcd · Base</div>
             </div>
           </div>
@@ -26,7 +26,7 @@ export default function AppNavbar() {
               Balance: ${balance}
             </span>
             <button
-              className="rounded-xl border px-3 py-1.5 text-sm hover:bg-neutral-50"
+              className="rounded-xl text-black cursor-pointer border px-3 py-1.5 text-sm hover:bg-sky-200"
               onClick={() => setOpenTopUp(true)}
             >
               Top up
