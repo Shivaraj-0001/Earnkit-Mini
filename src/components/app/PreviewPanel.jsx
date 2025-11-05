@@ -1,8 +1,11 @@
 "use client";
+
 import { useState } from "react";
+import PublishModal from "@/components/app/PublishModal";
 
 export default function PreviewPanel() {
   const [status, setStatus] = useState("Draft"); // Draft | Preview Ready | Published
+  const [openPublish, setOpenPublish] = useState(false);
 
   return (
     <div className="space-y-3">
@@ -24,6 +27,8 @@ export default function PreviewPanel() {
           className={`rounded-full px-2 py-1 text-xs ${
             status === "Published"
               ? "bg-green-100 text-green-700"
+              : status === "Preview Ready"
+              ? "bg-indigo-100 text-indigo-700"
               : "bg-amber-100 text-amber-700"
           }`}
         >
@@ -33,7 +38,10 @@ export default function PreviewPanel() {
 
       {/* Toolbar */}
       <div className="flex items-center gap-2">
-        <button className="rounded-xl border px-3 py-1.5 text-sm hover:bg-neutral-50">
+        <button
+          className="rounded-xl border px-3 py-1.5 text-sm hover:bg-neutral-50"
+          onClick={() => alert("Code viewer is read-only (placeholder).")}
+        >
           Code (read-only)
         </button>
         <button
@@ -50,7 +58,7 @@ export default function PreviewPanel() {
         </button>
         <button
           className="ml-auto rounded-xl bg-[#6E44FF] px-3 py-1.5 text-sm text-white hover:opacity-90"
-          onClick={() => setStatus((s) => (s === "Published" ? "Published" : "Preview Ready"))}
+          onClick={() => setOpenPublish(true)}
         >
           Publish
         </button>
@@ -62,6 +70,13 @@ export default function PreviewPanel() {
           Miniapp preview (stub)
         </div>
       </div>
+
+      {/* Modal */}
+      <PublishModal
+        open={openPublish}
+        onClose={() => setOpenPublish(false)}
+        onPublish={() => setStatus("Published")}
+      />
     </div>
   );
 }
