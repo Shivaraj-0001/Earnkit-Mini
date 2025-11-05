@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧩 Earnkit Miniapp Builder (Frontend Assignment)
 
-## Getting Started
+This is a **Next.js + Tailwind CSS** frontend project built for the **Earnkit Technical Assignment**.  
+It includes a complete **landing page** and a functional **app builder dashboard**.
 
-First, run the development server:
+---
 
+## 🚀 Tech Stack
+- **Next.js 14 (App Router)**
+- **React (JS)**
+- **Tailwind CSS v4**
+- **Deployed on Vercel**
+
+---
+
+## 🏠 Features Overview
+
+### 🌐 Landing Page
+- Sticky Navbar with smooth backdrop blur  
+- Hero section with prompt + quick idea chips  
+- “How it works” animated steps section  
+- Leaderboard with time-range tabs  
+- Footer with social links  
+
+### ⚙️ Builder Dashboard
+- 3-pane layout → **Sidebar | Chat | Preview**  
+- Chat panel simulating idea-to-miniapp generation  
+- Live status chips (Draft / Preview / Published)  
+- TopUp Modal (fake credit system)  
+- Publish Modal (mock publish confirmation)
+
+---
+
+## 🧭 Project Structure
+src/
+├─ app/
+│ ├─ page.jsx # Landing Page
+│ └─ app/page.jsx # Builder Page
+├─ components/
+│ ├─ landing/ # Landing Page Components
+│ ├─ app/ # Dashboard Components
+│ └─ primitives/ # Shared UI Elements
+└─ styles/ (if any)
+
+
+
+---
+
+## 🧩 How to Run Locally
 ```bash
+# 1️⃣ Clone the repo
+git clone https://github.com/<your-username>/Earnkit-Mini.git
+cd Earnkit-Mini
+
+# 2️⃣ Install dependencies
+npm install
+
+# 3️⃣ Run the dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# 4️⃣ Visit
+http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
