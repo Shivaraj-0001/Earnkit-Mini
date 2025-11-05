@@ -1,10 +1,19 @@
 @import "tailwindcss";
 
+:root { color-scheme: light; }
+html, body { height: 100%; }
+body { background: #f7f7fb; color: #0b0b0b; }
 
-:root {
+h1 { font-size: clamp(28px, 4vw, 40px); font-weight: 700; }
+h2 { font-size: clamp(20px, 2.6vw, 24px); font-weight: 600; }
+p  { color: #4b5563; } /* neutral-600 vibe */
+
+
+
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
-}
+} */
 
 @theme inline {
   --color-background: var(--background);
