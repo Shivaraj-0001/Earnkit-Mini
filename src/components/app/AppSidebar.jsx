@@ -12,18 +12,22 @@ export default function AppSidebar() {
   return (
     <nav aria-label="Projects" className="rounded-2xl border bg-white p-3">
       <div className="mb-2 text-xs font-semibold text-neutral-500">Projects</div>
-      <ul className="space-y-1" role="listbox" tabIndex={0}
-          onKeyDown={(e) => {
-            if (e.key === "ArrowDown") setActive(i => Math.min(i + 1, items.length - 1));
-            if (e.key === "ArrowUp") setActive(i => Math.max(i - 1, 0));
-          }}>
+      <ul
+        className="space-y-1"
+        role="listbox"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === "ArrowDown") setActive((i) => Math.min(i + 1, items.length - 1));
+          if (e.key === "ArrowUp") setActive((i) => Math.max(i - 1, 0));
+        }}
+      >
         {items.map((it, i) => (
           <li key={it.id}>
             <button
               role="option"
               aria-selected={active === i}
               onClick={() => setActive(i)}
-              className={`w-full rounded-xl px-3 py-2 text-left text-sm ${
+              className={`w-full rounded-xl px-3 py-2 text-left text-sm transition ${
                 active === i ? "bg-[#6E44FF] text-white" : "hover:bg-neutral-50"
               }`}
             >
@@ -34,7 +38,9 @@ export default function AppSidebar() {
       </ul>
 
       <div className="mt-6 border-t pt-3">
-        <button className="w-full rounded-xl border px-3 py-2 text-left text-sm">Settings</button>
+        <button className="w-full rounded-xl border px-3 py-2 text-left text-sm hover:bg-neutral-50">
+          Settings
+        </button>
       </div>
     </nav>
   );
